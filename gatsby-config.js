@@ -4,11 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'Baeksebin',
     description: '서버/인프라부터 코드 레벨까지',
-    siteUrl: 'https://github.com/baeksebin.github.io/portfolio', // No trailing slash allowed!
+    siteUrl: 'https://baeksebin.github.io/', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@100sebim',
   },
-  pathPrefix: '/portfolio',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
