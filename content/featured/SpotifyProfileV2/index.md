@@ -1,16 +1,16 @@
 ---
 date: '3'
-title: 'Build a Spotify Connected App'
-cover: './course-card.png'
-external: 'https://www.newline.co/courses/build-a-spotify-connected-app'
-cta: 'https://www.newline.co/courses/build-a-spotify-connected-app'
+title: '상용 검색엔진 솔루션 연동'
+cover: './search.png'
+external: 'https://kdemo.or.kr/main/allSearch.do?searchtxtall=민주'
+cta: ''
+# github: 'javascript:void(0)'
 tech:
-  - React
-  - Express
-  - Spotify API
-  - Styled Components
+  - RockyLinux
+  - Tomcat
+  - SEO
+  - Network
 ---
 
-Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
-
-Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+검색 경험을 최적화하기 위해 상용 검색엔진 솔루션을 도입하고 기존 시스템과 연동하는 작업을 수행했습니다.<br><br>
+다양한 유형의 콘텐츠를 통합 관리하고, 검색의 정확도와 분류 기능을 강화하여 사용자 만족도를 향상시키는 데 중점을 두었습니다.

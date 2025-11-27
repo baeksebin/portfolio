@@ -1,12 +1,12 @@
 ---
 date: '2016-12-21'
-title: 'Software Engineer Co-op'
-company: 'Starry'
-location: 'Boston, MA'
-range: 'July - December 2016'
-url: 'https://starry.com/'
+title: 'Soldier'
+company: '대한민국육군'
+location: ''
+range: 'December 2016 - September 2018'
+url: 'https://www.army.mil.kr/'
 ---
 
-- Engineered and improved major features of Starry's customer-facing Android web app using ES6, Handlebars, Backbone, Marionette, and CSS
-- Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with the Starry Station internet router
-- Collaborated with designers and other developers to ensure thoughtful and consistent user experiences across Starry’s iOS and Android mobile apps
+- 육군 병장 만기 전역
+- 155mm 자주곡사포 사격지휘 근무를 통해 복잡한 포격 제원 데이터를 신속하고 정확하게 계산/처리하여 임무를 완수
+- 자주포 등 장비 및 데이터 통신 시스템의 운영/점검 업무를 수행하며 시스템 장애 발생 시 신속하게 원인을 파악하고 대응하는 문제 해결 능력 습득

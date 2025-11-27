@@ -68,6 +68,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        // 'react-dom/client' 요청을 'react-dom'으로 대체
+        'react-dom/client': 'react-dom',
+      },
+    },
+  });
   // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
   if (stage === 'build-html' || stage === 'develop-html') {
     actions.setWebpackConfig({
