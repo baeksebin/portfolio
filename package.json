@@ -5,7 +5,7 @@
   "author": "Baeksebin <bsb983@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baeksebin/portfolio.git"
+    "url": "https://github.com/baeksebin/portfolio.git"
   },
   "keywords": [
     "gatsby"
@@ -21,7 +21,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public",
+    "deploy": "gh-pages -d public -b gh-pages",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
