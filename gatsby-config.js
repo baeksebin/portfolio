@@ -1,10 +1,11 @@
 const config = require('./src/config');
 
 module.exports = {
+  pathPrefix: '/portfolio', // GitHub Pages 경로
   siteMetadata: {
     title: 'Baeksebin',
     description: '서버/인프라부터 코드 레벨까지',
-    siteUrl: 'https://baeksebin.github.io/', // No trailing slash allowed!
+    siteUrl: 'https://baeksebin.github.io/portfolio', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@100sebim',
   },
