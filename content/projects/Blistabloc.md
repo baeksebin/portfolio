@@ -1,5 +1,5 @@
 ---
-date: '2023-02-01'
+date: '2022-02-01'
 title: '사료관리 시스템 개선'
 github: ''
 # external: 'https://blistabloc.com/'
