@@ -2,7 +2,7 @@
 date: '2025-11-01'
 title: '포트폴리오'
 github: 'https://github.com/baeksebin/portfolio'
-external: '/'
+external: 'https://baeksebin.github.io/portfolio'
 tech:
   - Gatsby
   - React
