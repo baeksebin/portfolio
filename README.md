@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/baeksebin/portfolio/main/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://github.com/baeksebin/portfolio/blob/main/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   baeksebin.github.io/portfolio
