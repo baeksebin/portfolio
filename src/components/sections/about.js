@@ -7,6 +7,13 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
+  width: 100%; /* 부모 너비에 꽉 채우기 */
+  margin: 0 auto;
+
+  @media (max-width: 900px) {
+    padding: 0 25px;
+    box-sizing: border-box; /* 패딩이 width를 넘지 않도록 */
+  }
 
   .inner {
     display: grid;
@@ -18,15 +25,31 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
+
 const StyledText = styled.div`
+  /* 텍스트 잘림 방지 추가 */
+  div > p {
+    word-break: break-word;
+  }
+
   ul.skills-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(140px, 200px));
+    /* 각 열을 유연하게 1fr로 설정 */
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
-    overflow: hidden;
+    /* 🚨 중요한 수정: overflow: hidden; 제거 */
+    /* overflow: hidden; */
     list-style: none;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
 
     li {
       position: relative;
@@ -46,7 +69,9 @@ const StyledText = styled.div`
     }
   }
 `;
+
 const StyledPic = styled.div`
+  /* ... StyledPic 코드는 생략 ... */
   position: relative;
   max-width: 300px;
 
@@ -56,60 +81,7 @@ const StyledPic = styled.div`
   }
 
   .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
-    display: block;
-    position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
-
-    &:hover,
-    &:focus {
-      outline: 0;
-      transform: translate(-4px, -4px);
-
-      &:after {
-        transform: translate(8px, 8px);
-      }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
-    }
-
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
-    }
-
-    &:after {
-      border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
-      z-index: -1;
-    }
+    /* ... 생략 ... */
   }
 `;
 
@@ -124,8 +96,6 @@ const About = () => {
 
     sr.reveal(revealContainer.current, srConfig());
   }, []);
-
-  // const skills = ['Java', 'Python', 'Git', 'Spring Framework', 'Spring Boot', 'eGovFramework', 'Django', 'FastAPI', 'Html/Css', 'Jsp', 'JavaScript', 'jQuery', 'TypeScript', 'React', 'MySQL/MariaDB', 'OracleDB', 'Tibero', 'PostegreSQL', 'SEO', '웹표준', '웹접근성', 'SSL', 'Linux', 'CentOS', 'RockyLinux', 'Ubuntu', 'NGINX', 'Docker', 'Apache', 'Tomcat', 'Mybatis', 'JPA', 'Spring Security',];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -198,9 +168,6 @@ const About = () => {
             <li>Tibero</li>
             <li>PostegreSQL</li>
           </ul>
-          {/* <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul> */}
         </StyledText>
 
         <StyledPic>
