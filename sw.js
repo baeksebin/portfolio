@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c0416b9dc4b600f77db85929a15805a1"
+    "revision": "4f9eb100fcab4df24822e8ce6d66fe36"
   },
   {
     "url": "546641dfde76ed00139ea2c3eae09499c5f2164a-6db13d039d611baa410b.js"
@@ -70,7 +70,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3825832676.json",
-    "revision": "a2d40bfe6c45399c2df78f0f8696cd98"
+    "revision": "f2a76ce437cf00a5a93a59d6505be61c"
   },
   {
     "url": "page-data/sq/d/70739316.json",
@@ -81,7 +81,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/archive/page-data.json",
-    "revision": "8f2dc7acd67a08c6267381cae9520071"
+    "revision": "1f147ebe11f083b64d9267956f563d3e"
   },
   {
     "url": "manifest.webmanifest",
