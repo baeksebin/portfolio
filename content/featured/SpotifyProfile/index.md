@@ -1,15 +1,15 @@
 ---
 date: '2'
-title: 'Spotify Profile'
+title: '데이터베이스 표준화 및 이관'
 cover: './demo.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+# github: 'javascript:void(0)'
+external: 'https://www.kdemo.or.kr/'
 tech:
-  - React
-  - Styled Components
-  - Express
-  - Spotify API
-  - Heroku
+  - RockyLinux
+  - Tomcat
+  - Oracle
+  - Network
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+기존 운영중인 데이터베이스 테이블을 효율적인 데이터 관리 및 시스템 확장을 위해 표준화했습니다.<br><br>
+기존 테이블의 컬럼명과 데이터 타입을 표준화된 규칙에 맞게 변경하고, 데이터 무결성을 유지하며 새로운 표준 테이블로 이관하는 작업을 성공적으로 수행했습니다.

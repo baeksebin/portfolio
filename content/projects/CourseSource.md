@@ -1,15 +1,19 @@
 ---
-date: '2016-04-01'
-title: 'CourseSource'
-github: 'https://github.com/bchiang7/WebDevSpring2016/tree/master/public/project'
-external: ''
+date: '2021-08-27'
+title: '국립극단 유지보수'
+github: ''
+external: 'https://www.ntck.or.kr/'
 tech:
-  - Angular
-  - Node
-  - Express
-  - MongoDB
-company: 'Northeastern'
-showInProjects: false
+  - Java
+  - Jsp
+  - JavaScript
+  - jQuery
+  - Lombok
+  - Log4j
+  - Mybatis
+  - GitLab
+company: '미디어그룹사람과숲'
+showInProjects: true
 ---
 
-Web application built on the MEAN (MongoDB, Express, Angular, Node) stack with the intention of providing Northeastern students a better experience browsing the courses offered at Northeastern.
+개선된 국립극단 페이지의 유지보수를 진행했습니다. 운영 단계에서 시스템의 기능적, 비기능적 측면을 지속적으로 관리하고 개선하였습니다.

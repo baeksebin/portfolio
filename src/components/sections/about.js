@@ -21,7 +21,7 @@ const StyledAboutSection = styled.section`
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(3, minmax(140px, 200px));
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  // const skills = ['Java', 'Python', 'Git', 'Spring Framework', 'Spring Boot', 'eGovFramework', 'Django', 'FastAPI', 'Html/Css', 'Jsp', 'JavaScript', 'jQuery', 'TypeScript', 'React', 'MySQL/MariaDB', 'OracleDB', 'Tibero', 'PostegreSQL', 'SEO', '웹표준', '웹접근성', 'SSL', 'Linux', 'CentOS', 'RockyLinux', 'Ubuntu', 'NGINX', 'Docker', 'Apache', 'Tomcat', 'Mybatis', 'JPA', 'Spring Security',];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,38 +135,72 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              안녕하세요 인프라와 애플리케이션의 경계를 넘나들며 안정적인 서비스를 만드는 개발자,
+              백세빈입니다.
             </p>
-
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              폐쇄망 환경에서 서버를 직접 구성하고 배포 파이프라인을 설계한 경험을 통해, 시스템
+              안정성과 운영 효율을 동시에 확보했습니다.
             </p>
-
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              데이터 구조 리디자인과 API 성능 개선을 진행하며, 실제 사용자 경험 중심의 개발을
+              실현했습니다.
             </p>
-
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>
+              앞으로도 서버부터 코드 레벨까지 아우르는 통합적인 시야로, 견고하면서도 유연한 백엔드
+              시스템을 구축하겠습니다
+            </p>
           </div>
-
+          <p></p>
+          <p>Backend</p>
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            <li>Java</li>
+            <li>Python</li>
           </ul>
+          <p></p>
+          <p>Frontend</p>
+          <ul className="skills-list">
+            <li>Html/Css</li>
+            <li>Jsp</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+            <li>TypeScript</li>
+            <li>React</li>
+          </ul>
+          <p></p>
+          <p>Framworks / Libraries</p>
+          <ul className="skills-list">
+            <li>Spring Framework</li>
+            <li>Spring Boot</li>
+            <li>eGovFramework</li>
+            <li>Django</li>
+            <li>FastAPI</li>
+            <li>Mybatis</li>
+            <li>JPA</li>
+            <li>Spring Security</li>
+          </ul>
+          <p></p>
+          <p>Server</p>
+          <ul className="skills-list">
+            <li>CentOS</li>
+            <li>LockyLinux</li>
+            <li>Ubuntu</li>
+            <li>Apache</li>
+            <li>Tomcat</li>
+            <li>NGINX</li>
+            <li>Docker</li>
+          </ul>
+          <p></p>
+          <p>Database</p>
+          <ul className="skills-list">
+            <li>MySQL/MariaDB</li>
+            <li>OracleDB</li>
+            <li>Tibero</li>
+            <li>PostegreSQL</li>
+          </ul>
+          {/* <ul className="skills-list">
+            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+          </ul> */}
         </StyledText>
 
         <StyledPic>

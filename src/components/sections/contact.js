@@ -59,10 +59,9 @@ const Contact = () => {
 
       <h2 className="title">Get In Touch</h2>
 
-      <p>
-        Although I’m not currently looking for any new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-      </p>
+      <p>제 메일함은 항상 열려 있습니다.</p>
+      <p>궁금한 점이 있으시면 언제든지 연락 주세요!</p>
+      <p>최선을 다해 답변해 드리겠습니다!</p>
 
       <a className="email-link" href={`mailto:${email}`}>
         Say Hello

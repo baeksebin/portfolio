@@ -1,14 +1,28 @@
 ---
-date: '2017-12-01'
-title: 'Apple Music Embeddable Web Player Widget'
+date: '2023-03-01'
+title: '국립항공박물관 자료 정보허브 구축'
 github: ''
-external: 'https://tools.applemusic.com/en-us'
+external: 'https://collection.aviation.or.kr/'
 tech:
-  - MusicKit.js
-  - JS
-  - SCSS
-company: 'Apple'
+  - NaverCloud
+  - Ubuntu
+  - Apache
+  - Tomcat
+  - DEXTSolution
+  - MySQL
+  - eGovframework
+  - Spring Security(회원관리 및 CSRF/XSS 방어)
+  - Java
+  - Jsp
+  - JavaScript
+  - jQuery
+  - Lombok
+  - Log4j
+  - JPA
+  - GitLab
+  - 웹취약점점검
+company: '미디어그룹사람과숲'
 showInProjects: true
 ---
 
-Embeddable web player widget for Apple Music that lets users log in and listen to full song playback in the browser leveraging [MusicKit.js](https://developer.apple.com/documentation/musickitjs). Read more about this project on [9to5Mac](https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/).
+박물관 자료 관리, 코드 관리, 세션 기반 인증 처리, 상용 대용량 파일 업로드 솔루션 도입 등 향후 대국민 서비스가 신뢰성 있게 사용될 수 있도록 구현했습니다.
