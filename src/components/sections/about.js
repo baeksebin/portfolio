@@ -10,9 +10,10 @@ const StyledAboutSection = styled.section`
   width: 100%; /* 부모 너비에 꽉 채우기 */
   margin: 0 auto;
 
+  /* 모바일 글씨 잘림 방지 및 좌우 여백 확보 */
   @media (max-width: 900px) {
     padding: 0 25px;
-    box-sizing: border-box; /* 패딩이 width를 넘지 않도록 */
+    box-sizing: border-box;
   }
 
   .inner {
@@ -27,28 +28,32 @@ const StyledAboutSection = styled.section`
 `;
 
 const StyledText = styled.div`
-  /* 텍스트 잘림 방지 추가 */
+  /* 일반 문단 p 태그 (자기소개) */
   div > p {
     word-break: break-word;
   }
 
+  /* 🚨 기술 제목 p 태그 스타일 추가: 구분을 명확히 하기 위함 */
+  & > p:not(:first-child) {
+    font-weight: 600; /* 굵게 강조 */
+    /* 현재 포트폴리오의 색상 변수를 가정하여 사용 */
+    /* color: var(--lightest-slate); */
+    margin-top: 15px; /* 위쪽 여백으로 이전 목록과 분리 */
+    margin-bottom: 5px; /* 아래쪽 여백으로 목록과의 간격 조정 */
+  }
+
   ul.skills-list {
     display: grid;
-    /* 각 열을 유연하게 1fr로 설정 */
+    /* 769px 이상: 3열 */
     grid-template-columns: repeat(3, minmax(120px, 1fr));
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
-    /* 🚨 중요한 수정: overflow: hidden; 제거 */
-    /* overflow: hidden; */
     list-style: none;
 
+    /* 768px 이하: 2열로 통일하여 스마트폰 기본 레이아웃 설정 */
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, minmax(120px, 1fr));
-    }
-
-    @media (max-width: 480px) {
-      grid-template-columns: 1fr;
     }
 
     li {
@@ -71,7 +76,6 @@ const StyledText = styled.div`
 `;
 
 const StyledPic = styled.div`
-  /* ... StyledPic 코드는 생략 ... */
   position: relative;
   max-width: 300px;
 
@@ -81,7 +85,60 @@ const StyledPic = styled.div`
   }
 
   .wrapper {
-    /* ... 생략 ... */
+    /* ... (mixins.boxShadow 등의 스타일 가정) ... */
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--green);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      transform: translate(-4px, -4px);
+
+      &:after {
+        transform: translate(8px, 8px);
+      }
+
+      .img {
+        filter: none;
+        mix-blend-mode: normal;
+      }
+    }
+
+    .img {
+      position: relative;
+      border-radius: var(--border-radius);
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1);
+      transition: var(--transition);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      background-color: var(--navy);
+      mix-blend-mode: screen;
+    }
+
+    &:after {
+      border: 2px solid var(--green);
+      top: 14px;
+      left: 14px;
+      z-index: -1;
+    }
   }
 `;
 
@@ -94,6 +151,7 @@ const About = () => {
       return;
     }
 
+    // sr.reveal은 스크롤 애니메이션 라이브러리 (gatsby-starter-default 패턴)
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
@@ -179,6 +237,9 @@ const About = () => {
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"
+              // ⭐️ 이미지 로딩 최적화 옵션 추가
+              placeholder="blurred"
+              loading="eager"
             />
           </div>
         </StyledPic>

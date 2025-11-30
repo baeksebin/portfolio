@@ -4,6 +4,7 @@ title: '포트폴리오'
 github: 'https://github.com/baeksebin/portfolio'
 external: 'https://baeksebin.github.io/portfolio'
 tech:
+  - Node.js
   - Gatsby
   - React
   - CSS
